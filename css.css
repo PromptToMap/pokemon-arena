@@ -1,0 +1,49 @@
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 100;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-Thin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Heebo';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://pokemon-arena.net/intro_2018/fonts/Heebo-Black.ttf') format('truetype');
+}

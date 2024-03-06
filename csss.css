@@ -1,0 +1,620 @@
+
+/**
+*	Created by Matan Mizrachi
+*		while1.co.il
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Heebo' , Arial;
+	font-weight: normal;
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a , span , strong , .strong {
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+
+strong , .strong {
+	font-weight: bold;
+}
+
+.box {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+#background-fix {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: url("https://pokemon-arena.net/intro_2018/imgs/bg_all.jpg") no-repeat top center;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+/**
+*	M - TOP
+*/
+#top {
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 0;
+}
+
+#top:before,
+#top::before {
+	/* Pikachu */
+	content: "";
+	display: inline-block;
+	width: 68px;
+	height: 75px;
+	background: url("https://pokemon-arena.net/intro_2018/imgs/pikachu.png") no-repeat center center;
+	margin: 30px auto 8px auto;
+	position: relative;
+	right: -16px;
+}
+
+#top img.logo {
+	display: block;
+	width: 272px;
+	/*height: 44px;*/
+	height: 30px;
+	margin: 0 auto;
+}
+
+/**
+* A - MAIN AREA
+*/
+#main {
+	display: block;
+	width: 98%;
+	max-width: 833px;
+	margin: 37px auto 0 auto;
+	font-size: 0;
+	border-top: 1px solid rgba(255,255,255,0.1);
+	padding-bottom: 170px;
+}
+
+#main h2 {
+	display: block;
+	width: 100%;
+	margin: 0 auto 8px auto;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 800;
+	font-size: 35px;
+	line-height: 25px;
+}
+
+#main h2:before,
+#main h2::before {
+	content: "";
+	display: block;
+	width: 40px;
+	height: 4px;
+	border: 2px solid #000000;
+	margin: 0 auto 16px auto;
+}
+
+#main h2.generic {
+	margin-top: 45px;
+}
+
+#main h2.generic:before,
+#main h2.generic::before {
+	border-color: #d6661b;
+}
+
+#main h2.no_subtitle {
+	margin-bottom: 34px;
+}
+
+#main p.subtitle {
+	display: block;
+	width: 100%;
+	margin: 0 auto 34px auto;
+	text-align: center;
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+#main form {
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0 47px;
+	text-align: center;
+}
+
+#main form input[type=text],
+#main form input[type=email],
+#main form input[type=password],
+#main form select,
+#main form textarea,
+#main form input[type=submit],
+#main form button,
+#main form .form_error,
+#main form .form_success {
+	display: block;
+	width: 100%;
+	margin: 14px auto 0 auto;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	background: none;
+	padding: 8px 16px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+#main form input::-webkit-input-placeholder { color: #ffffff; opacity: 1; }
+#main form input:-moz-placeholder { color: #ffffff; opacity: 1; }
+#main form input::-moz-placeholder { color: #ffffff; opacity: 1; }
+#main form input:-ms-input-placeholder { color: #ffffff; opacity: 1; }
+#main form input:placeholder-shown { color: #ffffff; opacity: 1; }
+
+#main form select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url("https://pokemon-arena.net/intro_2018/imgs/arrow_down.png") no-repeat 15px center;
+}
+
+#main form select option {
+	color: #000000;
+}
+
+#main form textarea {
+	height: 120px;
+}
+
+#main form input[type=submit],
+#main form button {
+	border: 1px solid #666666;
+	background-color: #666666;
+	font-weight: 500;
+	cursor: pointer;
+}
+
+#main form input[type=submit]:hover,
+#main form button:hover {
+	opacity: 0.8;
+}
+
+#main form input[type=submit].green,
+#main form button.green {
+	border-color: #85a637;
+	background-color: #85a637;
+}
+
+#main form input[type=submit].orange,
+#main form button.orange {
+	border-color: #d6661b;
+	background-color: #d6661b;
+}
+
+#main form .form_error {
+	border: 1px solid #dc1f1f;
+	background-color: #dc1f1f;
+	font-weight: 500;
+	margin: -14px auto 20px auto;
+}
+
+#main form .form_success {
+	border: 1px solid #85a637;
+	background-color: #85a637;
+	font-weight: 500;
+	margin: -14px auto 20px auto;
+}
+
+#main .col-login,
+#main .col-register {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 43px 40px;
+	text-align: center;
+}
+
+/**
+*	T - LOGIN
+*/
+
+#main .col-login {
+	border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+#main .col-login h2:before,
+#main .col-login h2::before {
+	border-color: #d6661b;
+}
+
+#main .col-login form {
+	padding-bottom: 32px;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#main .col-login form .forgot_links {
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 12px auto 0 auto;
+}
+
+/**
+*	A - REGISTER
+*/
+
+#main .col-register h2:before,
+#main .col-register h2::before {
+	border-color: #85a637;
+}
+
+#main .col-register form label.for_select,
+#main .captcha {
+	display: block;
+	width: 100%;
+	margin: 14px auto 0 auto;
+	text-align: left;
+	font-size: 0;
+}
+
+#main .col-register form label.for_select span {
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+	font-weight: 300;
+	color: #ffffff;
+	font-size: 15px;
+	vertical-align: middle;
+	text-align: right;
+}
+
+#main .col-register form label select,
+#main .captcha input[type=text] {
+	display: inline-block;
+	margin: 0 10px 0 0;
+	width: 120px;
+	vertical-align: middle;
+}
+
+#main .captcha img {
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	vertical-align: middle;
+}
+
+#main .captcha input[type=text] {
+	width: 70px;
+}
+
+#main .col-register form label.agree {
+	display: block;
+	width: 100%;
+	margin: 14px auto 0 auto;
+}
+
+#main .col-register form label.agree input[type=checkbox] {
+	vertical-align: middle;
+	margin-left: 5px;
+}
+
+/**
+*	N - GAME INFO TEXT
+*/
+
+#main #game_info {
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 30px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#main #game_info h3 {
+	display: block;
+	width: 100%;
+	margin: 33px auto 8px auto;
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #d96a1b;
+	padding: 7px 0 6px 0;
+}
+
+#main #game_info p {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+#main #game_info p.txt_join {
+	font-size: 17px;
+	font-weight: normal;
+	margin: 8px auto 0 auto;
+	padding: 5px 0;
+}
+
+#main #game_info h3,
+#main #game_info p.txt_join {
+	border-top: 1px dashed #ffffff;
+	border-bottom: 1px dashed #ffffff;
+}
+
+/**
+*	CREDIT
+*/
+
+#credit {
+	display: block;
+	width: 98%;
+	max-width: 242px;
+	margin: 19px auto 0 auto;
+	padding: 0 0 4px 0;
+	border-bottom: 1px dashed rgba(255,255,255,0.3);
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 18px;
+	color: rgba(255,255,255,0.4);
+	direction: ltr;
+}
+
+/**
+*	LINKS
+*/
+
+ul#links {
+	display: block;
+	width: 98%;
+	max-width: 242px;
+	margin: 3px auto 0 auto;
+	list-style: none;
+}
+
+ul#links li {
+	display: inline-block;
+	list-style: none;
+	font-weight: 300;
+	font-size: 13px;
+	color: rgba(255,255,255,0.3);
+}
+
+ul#links li:after,
+ul#links li::after {
+	content: " | ";
+}
+
+ul#links li:last-child:after,
+ul#links li:last-child::after {
+	content: "";
+}
+
+/**
+*	GAME STATS
+*/
+#game_stats {
+	display: block;
+	width: 100%;
+	# height: 137px;
+	height: 150px;
+	margin: 0 auto;
+	background: url("https://pokemon-arena.net/intro_2018/imgs/bg_ground.png") repeat center top;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	# padding-top: 60px;
+	padding-top: 3px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#game_stats:before,
+#game_stats::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 84px;
+	background: url("https://pokemon-arena.net/intro_2018/imgs/grass.png") repeat-x center center;
+	position: absolute;
+	top: -84px;
+	left: 0;
+	right: 0;
+}
+
+ul#game_stats {
+	list-style: none;
+	text-align: center;
+	font-size: 0;
+}
+
+ul#game_stats li {
+	display: inline-block;
+	list-style: none;
+	font-weight: 300;
+	font-size: 14px;
+	color: #7b685b;
+	margin: 0 18px;
+}
+
+ul#game_stats li strong {
+	font-weight: 800;
+}
+
+/**
+*	RESPONSIVE
+*/
+
+@media screen and (max-width:1920px){
+	#background-fix {
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width:1000px){
+	#background-fix {
+		background-image: url("https://pokemon-arena.net/intro_2018/imgs/bg.jpg");
+	}
+}
+
+@media screen and (max-width:900px){
+	#main {
+		padding-bottom: 35px;
+	}
+	
+	#main form {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	#main .col-login,
+	#main .col-register {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+	#main .col-register form label select {
+		width: 50%;
+	}
+	
+	#credit,
+	ul#links {
+		max-width: 325px;
+	}
+	
+	#game_stats {
+		position: relative;
+		height: auto;
+		padding: 60px 0;
+		background-size: auto 100%;
+	}
+}
+
+@media screen and (max-width:650px){
+	#main {
+		border: 0;
+		padding-bottom: 50px;
+	}
+	
+	#main .col-login,
+	#main .col-register {
+		display: block;
+		width: 100%;
+		border: 0;
+	}
+	
+	#main .col-register form label select {
+		width: 70%;
+	}
+	
+	#credit,
+	ul#links {
+		max-width: 100%;
+	}
+	
+	#credit {
+		margin-top: 60px;
+	}
+}
+
+@media screen and (max-width:500px){
+	#main .col-login,
+	#main .col-register {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	#main .col-register form label select {
+		width: 55%;
+	}
+}
+
+@media screen and (max-width:400px){
+	#game_stats {
+		padding: 30px 0;
+	}
+	
+	ul#game_stats li {
+		display: block;
+		margin: 2px auto;
+	}
+}
+
+@media screen and (max-width:350px){
+	#main form {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	#main .col-register form label.for_select span {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+	
+	#main .col-register form label select {
+		display: block;
+		width: 100%;
+		margin: 0;
+	}
+	
+	#main .captcha {
+		text-align: center;
+	}
+	
+	#main #game_info {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+@media screen and (max-width:300px){
+	#top img.logo {
+		width: 90%;
+		height: auto;
+	}
+}
