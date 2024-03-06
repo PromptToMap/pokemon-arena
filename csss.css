@@ -146,7 +146,7 @@ body {
 	line-height: 14px;
 }
 
-#main form {
+.form {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
@@ -156,15 +156,14 @@ body {
 	text-align: center;
 }
 
-#main form input[type=text],
-#main form input[type=email],
-#main form input[type=password],
-#main form select,
-#main form textarea,
-#main form input[type=submit],
-#main form button,
-#main form .form_error,
-#main form .form_success {
+.form input[type=text],
+.form input[type=email],
+.form input[type=password],
+.form select,
+.form textarea,
+.form button,
+.form .form_error,
+.form .form_success {
 	display: block;
 	width: 100%;
 	margin: 14px auto 0 auto;
@@ -180,60 +179,56 @@ body {
 	font-weight: 300;
 }
 
-#main form input::-webkit-input-placeholder { color: #ffffff; opacity: 1; }
-#main form input:-moz-placeholder { color: #ffffff; opacity: 1; }
-#main form input::-moz-placeholder { color: #ffffff; opacity: 1; }
-#main form input:-ms-input-placeholder { color: #ffffff; opacity: 1; }
-#main form input:placeholder-shown { color: #ffffff; opacity: 1; }
+.form input::-webkit-input-placeholder { color: #ffffff; opacity: 1; }
+.form input:-moz-placeholder { color: #ffffff; opacity: 1; }
+.form input::-moz-placeholder { color: #ffffff; opacity: 1; }
+.form input:-ms-input-placeholder { color: #ffffff; opacity: 1; }
+.form input:placeholder-shown { color: #ffffff; opacity: 1; }
 
-#main form select {
+.form select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	background: url("https://pokemon-arena.net/intro_2018/imgs/arrow_down.png") no-repeat 15px center;
 }
 
-#main form select option {
+.form select option {
 	color: #000000;
 }
 
-#main form textarea {
+.form textarea {
 	height: 120px;
 }
 
-#main form input[type=submit],
-#main form button {
+.form button {
 	border: 1px solid #666666;
 	background-color: #666666;
 	font-weight: 500;
 	cursor: pointer;
 }
 
-#main form input[type=submit]:hover,
-#main form button:hover {
+.form button:hover {
 	opacity: 0.8;
 }
 
-#main form input[type=submit].green,
-#main form button.green {
+.form button.green {
 	border-color: #85a637;
 	background-color: #85a637;
 }
 
-#main form input[type=submit].orange,
-#main form button.orange {
+.form button.orange {
 	border-color: #d6661b;
 	background-color: #d6661b;
 }
 
-#main form .form_error {
+.form .form_error {
 	border: 1px solid #dc1f1f;
 	background-color: #dc1f1f;
 	font-weight: 500;
 	margin: -14px auto 20px auto;
 }
 
-#main form .form_success {
+.form .form_success {
 	border: 1px solid #85a637;
 	background-color: #85a637;
 	font-weight: 500;

